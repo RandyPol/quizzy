@@ -1,7 +1,68 @@
-body {
+* {
   margin: 0;
   box-sizing: border-box;
 }
-.App {
+/* #root{
+text-align: center;
+background-color: aqua;
+width: 100vw;
+} */
+/* Startup CSS */
+.container--start {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  height: 100vh;
+  row-gap: 10px;
+}
+
+.start--title {
+  width: 412px;
+  height: 41px;
+  font-family: 'Karla';
+  font-weight: 700;
+  line-height: 37px;
   text-align: center;
+
+  color: #293264;
+}
+
+.start--summary {
+  width: 318px;
+  height: 19px;
+  font-family: 'Inter';
+  font-weight: 400;
+  text-align: center;
+
+  color: #293264;
+}
+
+.start--button {
+  width: 193px;
+  height: 52px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #f5f7fb;
+  background: #4d5b9e;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.start--img {
+  position: absolute;
+}
+.img-blue {
+  left: 0;
+  bottom: 0;
+}
+.img-yellow {
+  top: 0;
+  right: 0;
 }
