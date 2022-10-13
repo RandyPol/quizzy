@@ -5,9 +5,13 @@ const SingleQ = ({ singleQ }) => {
   const answerOptions = singleQ.incorrect_answers
     .concat(singleQ.correct_answer)
     .map((item) => (
-      <p className="group--single" key={nanoid()}>
-        {item}
-      </p>
+      <p
+        className="group--single"
+        key={nanoid()}
+        dangerouslySetInnerHTML={{
+          __html: `${item}`,
+        }}
+      />
     ))
 
   return (
