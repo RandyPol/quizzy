@@ -1,19 +1,23 @@
 import React from 'react'
+import AllQ from './components/AllQ'
 import './App.css'
 import blueBack from './images/blobsBlue.png'
 import yellowBack from './images/blobYellow.png'
+
 function App() {
   const [listOfQuestions, setListOfQuestions] = React.useState([])
   const [start, setStart] = React.useState(true)
 
   React.useEffect(() => {
-    return async () => {
+    const pullListOfQuestions = async () => {
       const response = await fetch(
         'https://opentdb.com/api.php?amount=10&category=9'
       )
       const data = await response.json()
       setListOfQuestions(data.results)
     }
+
+    pullListOfQuestions()
   }, [])
   const startQuiz = () => setStart((prev) => !prev)
 
@@ -38,7 +42,7 @@ function App() {
           ></img>
         </div>
       ) : (
-        <p>KLK</p>
+        <AllQ allQ={listOfQuestions} />
       )}
     </>
   )
