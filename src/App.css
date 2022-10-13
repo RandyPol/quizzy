@@ -75,7 +75,7 @@ width: 100vw;
   align-items: center;
   row-gap: 50px;
   height: 100vh;
-  background-color: #4d5b9e;
+  /* background-color: #4d5b9e; */
 }
 
 .quizImage {
@@ -110,7 +110,7 @@ width: 100vw;
   flex-direction: column;
   padding: 40px;
   row-gap: 15px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 /* Question Div */
@@ -138,11 +138,12 @@ width: 100vw;
 .group--options {
   display: flex;
   gap: 20px;
-  background-color: #f5f7fb;
+  /* background-color: #f5f7fb; */
   margin-bottom: 10px;
 }
 
 .group--single {
+  padding: 5px 20px;
   width: auto;
   border: 0.8px solid #4d5b9e;
   border-radius: 8px;
