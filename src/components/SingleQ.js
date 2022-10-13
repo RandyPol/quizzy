@@ -18,8 +18,7 @@ const SingleQ = ({ singleQ }) => {
           __html: `${singleQ.question}`,
         }}
       />
-      <div className="group--options"></div>
-      {answerOptions}
+      <div className="group--options">{answerOptions}</div>
     </div>
   )
 }

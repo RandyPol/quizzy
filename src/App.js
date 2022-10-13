@@ -3,6 +3,8 @@ import AllQ from './components/AllQ'
 import './App.css'
 import blueBack from './images/blobsBlue.png'
 import yellowBack from './images/blobYellow.png'
+// import quizBlue from './images/quizBlue.png'
+// import quizYellow from './images/quizYellow.png'
 
 function App() {
   const [listOfQuestions, setListOfQuestions] = React.useState([])
@@ -42,7 +44,20 @@ function App() {
           ></img>
         </div>
       ) : (
-        <AllQ allQ={listOfQuestions} />
+        <div className="quiz-container">
+          <AllQ allQ={listOfQuestions} />
+          <img
+            className="quizImage quiz-image-blue"
+            src={blueBack}
+            alt="blueima"
+          />
+          <img
+            className="quizImage quiz-image-yellow"
+            src={yellowBack}
+            alt="yellowima"
+          />
+          <button className='quiz--button'>Check Answers</button>
+        </div>
       )}
     </>
   )
